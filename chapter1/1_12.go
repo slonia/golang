@@ -34,12 +34,12 @@ func paramOrDefault(r url.Values, name string, def float64) float64 {
 	keys, ok := r[name]
 
 	if !ok || len(keys) < 1 {
-		log.Printf("Url Param '%s' is missing, will use %v/n", name, def)
+		log.Printf("Url Param '%s' is missing, will use %v\n", name, def)
 		return def
 	}
 	val, _ := strconv.Atoi(keys[0])
 
-	log.Printf("Url Param '%s' found, using %v/n", name, val)
+	log.Printf("Url Param '%s' found, using %v\n", name, val)
 	return float64(val)
 }
 
